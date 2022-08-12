@@ -1,0 +1,10 @@
+.title-detail{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: orange;
+    text-transform: uppercase;
+    margin: 50px;
+}
+
+ 

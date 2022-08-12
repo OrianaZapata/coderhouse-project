@@ -1,0 +1,17 @@
+nav{
+    background-color: rgb(242, 224, 209);
+}
+nav img.logo{
+    margin-right: 100px;
+}
+
+nav div Button.btn {
+    font-size: 15px;
+    border: transparent;
+    margin-right: 10px;
+}
+
+nav div .btn:hover{   
+    background: #fbac7b;
+    border: transparent;
+}

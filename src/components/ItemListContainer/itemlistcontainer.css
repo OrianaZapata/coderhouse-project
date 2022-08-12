@@ -1,0 +1,42 @@
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.contenedor-tarjetas{   
+    display: flex;
+    justify-content: center;
+}
+
+div div.tarjetas{
+    user-select: none;
+    display: flex;
+    width: 20%;
+    margin: 20px;
+    border-style: solid;
+    border-color: rgb(255, 231, 187);
+    border-radius: .5em;
+}
+
+#img-tarjeta{
+    width: 4em;
+    height: 8em;    
+}
+
+div h6{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+div div p{
+    font-size: 8px;
+}
+
+button.boton{
+    background-color: rgb(255, 231, 187);
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
