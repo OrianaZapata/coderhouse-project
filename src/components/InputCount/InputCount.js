@@ -13,7 +13,7 @@ const InputCount = ({ onConfirm, stock, initial=1 }) => {
       <div>
         <input type='number' onChange={handleChange} value={count} />
         <button 
-            className='btn btn-outline-info mt-3 text-dark mb-4'
+            className=''
             onClick={()=> onConfirm(count)}> 
             Agregar al carrito <i className="bi bi-bag-plus-fill text-info"></i>
         </button>

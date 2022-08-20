@@ -1,5 +1,7 @@
 nav{
-    background-color: rgb(242, 224, 209);
+    background-color: #473610;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
 }
 nav img.logo{
     margin-right: 100px;
@@ -12,6 +14,6 @@ nav div Button.btn {
 }
 
 nav div .btn:hover{   
-    background: #fbac7b;
+    background: #44321b;
     border: transparent;
 }

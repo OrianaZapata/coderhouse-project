@@ -21,7 +21,6 @@ const ItemDetailContainer = () => {
     }, [productId])
     return (
     <>   
-        <h4 className='mt-5 title-detail d-flex justify-content-center'> Detalle </h4>
         <ItemDetail {...product} />
     </>
   )

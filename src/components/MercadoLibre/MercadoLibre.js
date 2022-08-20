@@ -18,11 +18,11 @@ const MercadoLibre = () => {
             }).finally(() => {
                 setLoading(false)
             })      
-     }
-     console.log(input)
-     if(loading){
-        return  <h1> Cargando...  </h1>
-     }
+        }
+        console.log(input)
+        if(loading){
+            return  <h1>Cargando...</h1>
+        }
 
   return (
     <>
