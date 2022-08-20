@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-import { getProductById } from '../../simulacionApi'
+// import { getProductById } from '../../simulacionApi'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import './ItemDetailContainer.css'
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from '../../service/firebase'
 
 const ItemDetailContainer = () => {
 
@@ -11,13 +13,14 @@ const ItemDetailContainer = () => {
     const { productId } = useParams()
 
     useEffect(()=>{
-        getProductById(productId)
-            .then(product => {
-                setProduct(product)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+      getDoc(doc(db, 'products', productId)).then(response => {
+        console.log(response)
+        const data =response.data()
+        const productosTransformados = { id: response.id, ...data}
+        setProduct(productosTransformados)
+      }).catch(error=>{
+        console.log(error)
+      })
     }, [productId])
     return (
     <>   

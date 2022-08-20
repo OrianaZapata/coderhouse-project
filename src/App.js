@@ -5,14 +5,14 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Contacto from './components/Contacto/Contacto';
 import { CartContextProvider } from './Context/CartContext'
-import { NotificacionProvider } from './notification/Notification';
+// import { NotificacionProvider } from './notification/Notification';
 import CartView from './components/CartView/CartView';
 
 function App() {
 
   return (
     <>
-    <NotificacionProvider> 
+    {/* <NotificacionProvider>  */}
       <CartContextProvider >
         <Router>
           <Navbar />
@@ -27,7 +27,7 @@ function App() {
           </Routes>
           </Router>
       </CartContextProvider>
-    </NotificacionProvider>
+    {/* </NotificacionProvider> */}
 
     </>
   );

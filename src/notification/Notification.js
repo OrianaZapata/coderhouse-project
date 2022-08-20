@@ -17,6 +17,7 @@ const Notificacion = ({ mensaje, severity }) =>{
       backgroundColor: background[severity] || background.default,
       color: 'black'
     }
+
     if(mensaje === '') return
     
     return(
@@ -30,7 +31,7 @@ const Notificacion = ({ mensaje, severity }) =>{
   
   export const NotificacionProvider = ({ children }) => {
 
-    const [ mensaje, setMensaje] = useState('Notificación')
+    const [ mensaje, setMensaje] = useState()
     const [ severity, setSeverity] = useState('success')
 
     const setNotificacion = (msg, sev) => {
