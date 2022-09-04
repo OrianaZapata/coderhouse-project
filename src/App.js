@@ -7,6 +7,7 @@ import Contacto from './components/Contacto/Contacto';
 import { CartContextProvider } from './Context/CartContext'
 // import { NotificacionProvider } from './notification/Notification';
 import CartView from './components/CartView/CartView';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
             <Route path='/carrito' element={<CartView />} />
             <Route path='/contacto' element={ <Contacto/> } />
             <Route path='*' element={ <h1> 404. PÁGINA NO ENCONTRADA </h1> } />
-            {/* <Route path='/cart' element={ <Carrito />} /> */}
+            <Route path='/finalizar-compra' element={ <Checkout />} />
           </Routes>
           </Router>
       </CartContextProvider>

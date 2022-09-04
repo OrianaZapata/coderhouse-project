@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 // import { getProductsDeAlfredo, getProductsByCategory } from '../../simulacionApi';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { getDocs, collection, query, where, Query } from 'firebase/firestore';
+import { getDocs, collection, query, where } from 'firebase/firestore';
 import { db } from '../../service/firebase';
 
 const ItemListContainer = ({ greeting }) => {
@@ -32,20 +32,12 @@ const ItemListContainer = ({ greeting }) => {
 
       const productosTransformados = response.docs.map(doc => {
         const data = doc.data()
-        // console.log(data)
         return { id: doc.id, ...data}
       })
       setProducts(productosTransformados)
     }).catch(error =>{
       console.log(error)
     })
-    // const asyncFunction = categoryId ? getProductsByCategory : getProductsDeAlfredo;
-    
-    // asyncFunction(categoryId).then(products => {
-    //   setProducts(products)
-    // }).catch(error => {
-    //   console.log(error)
-    // })
   }, [categoryId])
 
   return (

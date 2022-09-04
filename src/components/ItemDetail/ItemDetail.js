@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import CartContext from '../../Context/CartContext'
 import ButtonCount from '../ButtonCount/ButtonCount'
 import InputCount from '../InputCount/InputCount'
-import NotificacionContext from '../../notification/Notification'
 import './ItemDetail.css';
 
 const ItemDetail = ({ id, name, description, category, price, stock }) => {
@@ -11,7 +10,6 @@ const ItemDetail = ({ id, name, description, category, price, stock }) => {
   const[inputType, setInputType] = useState('button')
   const[quantityToAdd, setQuantityToAdd] = useState(0)
   const{ addItem, getProductQuantity } = useContext(CartContext)
-  const { setNotificacion } = useContext(NotificacionContext)
 
   const handleOnAdd = (quantity) => {
     console.log(`La cantidad agregada es: ${quantity} `)
@@ -20,7 +18,6 @@ const ItemDetail = ({ id, name, description, category, price, stock }) => {
       id, name, price, quantity
     }
     addItem(productToAdd)
-    setNotificacion(`Se agregaron ${quantity} ${name}`)
   }
 
   const productQuantity = getProductQuantity(id)
@@ -41,7 +38,7 @@ const ItemDetail = ({ id, name, description, category, price, stock }) => {
             { quantityToAdd === 0 ? (
                 <Count onConfirm={handleOnAdd} stock={stock} initial={productQuantity} />
                 ) : (
-                  <Link to='/cart' className='text-success'> Finalizar compra <i className="bi bi-check-lg"></i> </Link> 
+                  <Link to='/finalizar-compra' className='text-success'> Finalizar compra <i className="bi bi-check-lg"></i> </Link> 
                   )
                 }
               {/* <button onClick={() => setInputType(inputType === 'button' ? 'input' : 'button')}> {inputType === 'button' ? 'Pasar a input' : 'Pasar a button'} </button> */}

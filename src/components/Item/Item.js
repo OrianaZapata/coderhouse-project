@@ -9,7 +9,7 @@ const Item = ({ id, img, name, price }) => {
     }
   return (
     <>    
-      <div className='card mb-4' key={id} onClick={handleClick}>                    
+      <div className='card mb-5' key={id} onClick={handleClick}>                    
         <div className="card-body text-center"> 
           <div className="title-card">{name}</div> 
           <hr/> 

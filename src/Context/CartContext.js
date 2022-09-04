@@ -56,7 +56,7 @@ export const CartContextProvider = ({ children }) => {
 
         cart.forEach(product => {
             precioTotal += parseInt(product.price) * product.quantity
-            console.warn(precioTotal)
+            console.log(precioTotal)
         })
 
         return precioTotal
