@@ -41,10 +41,8 @@ const CartView = () => {
                 <div className='mt-2'> Cantidad de productos: {prodInCart} </div>
                 <div> Total de compra: $ {prodTotal} </div>
                 <hr/>                
-                <Link to='/finalizar-compra' className='text-success'> Finalizar compra <i className="bi bi-check-lg"></i> </Link> 
                 <Link to='/' className='text-center text-white text-sm'> Seguir comprando </Link> 
-                
-                {prodInCart > 0 ? <button className='btn btn-success mb-2' onClick={() => clearCart()}> Vaciar carrito </button> : <Link to='/'>Volver al inicio</Link>}
+                {prodInCart > 0 ? <div>  <button className='btn btn-success mb-2' onClick={() => clearCart()}> Vaciar carrito </button> <br/> <Link to='/finalizar-compra' className='text-success'> Finalizar compra <i className="bi bi-check-lg"></i> </Link> </div> : <Link to='/'>Volver al inicio</Link> }
             </div>
         </div>
     </>

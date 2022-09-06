@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db } from '../../service/firebase'
 import { addDoc, collection, updateDoc, doc, getDocs, query,  where, documentId, writeBatch } from 'firebase/firestore'
+import Formulario from '../Formulario/Formulario'
 
 const Checkout = () => {
 
@@ -66,8 +67,7 @@ const Checkout = () => {
                 }, 5000);
             }else{
                 console.log('Hay productos que no tenemos en stock')
-            }
-            
+            }            
         }catch(error){
             console.log(error)
         } finally{
@@ -83,9 +83,12 @@ const Checkout = () => {
     }
   return (
     <>
-        <h1> Finalizar Compra </h1>
+    <div className='text-center'>
+        <h1 className='my-5'> Finalizar Compra </h1>
+        <Formulario/>
         <button className='btn btn-success' onClick={ordenDeCompra}> Generar Orden  </button>
 
+    </div>
     </>
  
   )
