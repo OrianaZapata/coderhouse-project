@@ -1,11 +1,9 @@
-import './App.css';
 import { BrowserRouter as Router , Route, Routes } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Contacto from './components/Contacto/Contacto';
 import { CartContextProvider } from './Context/CartContext'
-// import { NotificacionProvider } from './notification/Notification';
 import CartView from './components/CartView/CartView';
 import Checkout from './components/Checkout/Checkout';
 
@@ -13,7 +11,6 @@ function App() {
 
   return (
     <>
-    {/* <NotificacionProvider>  */}
       <CartContextProvider >
         <Router>
           <Navbar />
@@ -28,7 +25,6 @@ function App() {
           </Routes>
           </Router>
       </CartContextProvider>
-    {/* </NotificacionProvider> */}
 
     </>
   );
