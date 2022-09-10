@@ -10,9 +10,7 @@ import {
     query,  
     where, 
     documentId, 
-    writeBatch, 
-   
-
+    writeBatch 
 } from 'firebase/firestore'
 
 const Checkout = () => {
